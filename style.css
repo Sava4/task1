@@ -1,0 +1,204 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+  line-height: 1.5;
+  letter-spacing: 1px;
+}
+
+h1,
+h2,
+p {
+  margin: 0;
+}
+
+.container {
+  /* desktop sizing */
+  /* width: 80%;
+  max-width: 1040px;
+  margin: 0 auto; */
+  /* desktop sizing */
+
+  max-width: 93.6%;
+  margin: 0 auto;
+}
+
+.header {
+  padding-top: 24px;
+  min-height: 320px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  background: linear-gradient(348.21deg, #cdd439 0%, #55b851 100%);
+}
+
+.tournament-name {
+  display: flex;
+  align-items: center;
+  padding-bottom: 24px;
+}
+
+.tournament-name a {
+  text-decoration: none;
+}
+
+.logo {
+  width: 64px;
+  height: 64px;
+}
+
+.tournament {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 27px;
+  color: #fff;
+  margin-left: 32px;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.tournament-stats {
+  flex-basis: 100%;
+  background: rgba(0, 0, 0, 0.13);
+  background-size: 100% 120px;
+  font-size: 12px;
+  color: #fff;
+  padding: 24px 0 24px 0;
+  line-height: 1.5;
+  text-transform: uppercase;
+}
+
+.stat-list {
+  padding-left: 0;
+  width: 206px;
+}
+
+.tournament-stats li {
+  list-style-type: none;
+}
+
+/* Countdown component */
+
+.countdown {
+  text-align: center;
+}
+
+.countdown li {
+  display: inline-block;
+  font-size: 12px;
+  list-style-type: none;
+  color: #0c9755;
+  padding: 8px;
+  font-weight: 700;
+  position: relative;
+}
+
+.countdown li span {
+  display: block;
+  font-size: 24px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.months::before {
+  content: "";
+  background-color: rgba(0, 0, 0, 0.15);
+  height: 22px;
+  width: 1px;
+  position: absolute;
+  left: 0px;
+  top: 17px;
+}
+
+.months::after {
+  content: "";
+  background-color: rgba(0, 0, 0, 0.15);
+  height: 22px;
+  width: 1px;
+  position: absolute;
+  right: 0px;
+  top: 17px;
+}
+
+.days::before {
+  content: "";
+  background-color: rgba(0, 0, 0, 0.15);
+  height: 22px;
+  width: 1px;
+  position: absolute;
+  right: -4px;
+  top: 17px;
+}
+
+@media all and (min-width: 1200px) {
+  .header {
+    background: no-repeat url("./bg_desktop.png") -275px center;
+    background-size: cover;
+    min-height: 200px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+
+  .container {
+    margin: 0;
+    max-width: unset;
+  }
+
+  .flex-container {
+    background: rgba(0, 0, 0, 0.2);
+    margin-left: 49px;
+    border-radius: 8px;
+    align-self: stretch;
+  }
+
+  .logo {
+    width: 120px;
+    height: 120px;
+  }
+
+  .countdown {
+    border-radius: 8px;
+    background: linear-gradient(93.93deg, #adcb47 9.49%, #b7ce43 109.49%);
+  }
+
+  .countdown ul {
+    padding-left: 0;
+    margin: 0;
+  }
+
+  .tournament {
+    margin-left: 102px;
+  }
+
+  .tournament-countdown {
+    order: 1;
+    padding: 16px 12px 0;
+  }
+
+  .tournament-stats {
+    order: 2;
+    width: 90%;
+    background: rgba(0, 0, 0, 0);
+    padding: 12px 0 12px 0;
+    margin-left: 8px;
+  }
+}
+
+@media all and (min-width: 1920px) {
+  .header {
+    background: no-repeat url("./bg_desktop.png") 60px center;
+    background-size: 100%;
+  }
+}
